@@ -4,13 +4,53 @@ description: 오픈소스
 
 # practicebook
 
-## 오픈소스란 무엇인가?
+{% api-method method="get" host="https://api.cakes.com" path="/v1/cakes/:id" %}
+{% api-method-summary %}
+Get Cakes
+{% endapi-method-summary %}
 
-오픈소스는 소프트웨어 혹은 하드웨어를 누구나 접근할 수 있도록 하여 사람들이 이를 수정 및 공유할 수 있는 소프트웨어 혹은 하드웨어를 일컫는다.
+{% api-method-description %}
+This endpoint allows you to get free cakes.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="book" type="string" required=false %}
+fdfdfdd
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Cake successfully retrieved.
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "name": "Cake's name",
+    "recipe": "Cake's recipe name",
+    "cake": "Binary cake"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+Could not find a cake matching this query.
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "message": "Ain't no cake like that."
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 
-
-## 오픈소스 소프트웨어란 무엇인가? 
-
-오픈소스 소프트웨어, OSS라고도 한다.소프트웨어의설계도에 해당하는 소스코드를 인터넷 등을 통하여 무상으로 공개하여 누구나 그 소프트웨어를 개량하고,이것을 재배포할 수 있도록 하는 것 또는 그런 소프트웨어를 말한다.
 
